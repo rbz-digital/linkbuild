@@ -4,10 +4,15 @@
     --max-width: 960px;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
     font-family: "Montserrat", Arial, Helvetica, sans-serif;
+    color: #222222;
 }
 
 h2 {
@@ -84,19 +89,14 @@ a {
 }
 
 .linear ul li a.buy::after {
-    content: '👉';
+    content: '👇';
     position: absolute;
-    top: .3rem;
+    top: .5rem;
     right: .8rem;
 }
 
 .linear ul li a.buy:hover {
     background-color: #00ab08;
-}
-
-.linear ul li a.buy:hover::after {
-    content: '👇';
-    top: .5rem;
 }
 
 .vertical-middle {
@@ -107,7 +107,14 @@ a {
 
 .logo {
     position: relative;
-    width: 185px;
+    width: 200px;
+    padding-left: 32px;
+}
+
+.logo img {
+    position: absolute;
+    left: 0;
+    top: -5px;
 }
 
 .logo .bold {
@@ -128,19 +135,19 @@ a {
 }
 
 .hero h1 {
-    text-align: center;
     font-size: 2.4rem;
-    line-height: 3.1rem;
+    line-height: 3rem;
 }
 
 .hero .subtitle {
-    text-align: center;
-    font-size: 1.5rem;
-    line-height: 2.4rem;
+    font-size: 1.3rem;
+    line-height: 2rem;
     font-weight: 400;
-    max-width: 80%;
-    margin: 0 auto;
     color: gray;
+    padding: 0 5% 0 15%;
+    background-image: url(../img/taxonomia.png);
+    background-repeat: no-repeat;
+    background-position: 4%;
 }
 
 .video {
@@ -208,7 +215,6 @@ aside {
 .checks li {
     background-image: url(../img/check.png);
     background-repeat: no-repeat;
-    height: 80px;
     padding: 0 0 0 85px;
     margin-bottom: 1.5rem;
     display: flex;
@@ -259,7 +265,8 @@ aside {
     margin-bottom: .5rem;
 }
 
-.funcionamento li .filho li::before {
+.funcionamento li .filho li::before,
+.list-template li::before {
     content: '';
     width: .8rem;
     height: .8rem;
@@ -288,9 +295,9 @@ aside {
 }
 
 .button::after {
-    content: '👉';
+    content: '🔒';
     position: absolute;
-    top: .4rem;
+    top: .6rem;
     right: .8rem;
 }
 
@@ -307,4 +314,136 @@ aside {
     padding: 0 0 0 3rem;
     list-style-type: none;
     line-height: 1.5rem;
+}
+
+.gray {
+    color: lightgray;
+}
+
+p.assinatura {
+    line-height: 1.5rem;
+    color: #333333;
+    margin-bottom: 2rem;
+}
+
+.fullflex.black {
+    background-color: #111111;
+    color: #FFFFFF;
+}
+
+.pagtos {
+    margin-top: 1rem;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    opacity: .4;
+}
+
+.pagtos div {
+    background-image: url(../img/pagtos.png);
+    background-repeat: no-repeat;
+}
+
+.pagtos .credito {
+    background-position: 0px -58px;
+    width: 100px;
+    height: 22px;
+}
+
+.pagtos .boleto {
+    background-position: 0 -1px;
+    width: 150px;
+    height: 22px;
+}
+
+.pagtos .pix {
+    background-position: 0 -26px;
+    width: 64px;
+    height: 32px;
+}
+
+p.saiba-mais {
+    font-size: 90%;
+    color: #333333;
+    padding-top: 1rem;
+}
+
+p.saiba-mais a {
+    display: block;
+    text-decoration: none;
+    font-weight: 600;
+    color: #00af6b;
+    margin-top: 3px;
+}
+
+.inclusos dt {
+    font-weight: 600;
+    font-size: 1.1rem;
+    padding: .5rem 0;
+}
+
+.magic > ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+.magic > ul > li {
+    background-repeat: no-repeat;
+    padding: 0 0 0 100px;
+    margin-bottom: 1.5rem;
+    display: flex;
+    align-items: center;
+    font-size: 1rem;
+    line-height: 1.4rem;
+    gap: 3rem;
+}
+
+.magic > ul > li:nth-child(1) {
+    background-image: url(../img/palavra-chave.png);
+}
+
+.magic > ul > li:nth-child(2) {
+    background-image: url(../img/nicho.png);
+}
+
+.magic > ul > li:nth-child(3) {
+    background-image: url(../img/backlinks.png);
+}
+
+.magic > ul > li .custo {
+    flex: 1 0 21%;
+    border: 1px solid #FFFFFF;
+    padding: .75rem 1rem;
+    border-radius: 6px;
+}
+
+.cc-price {
+    font-size: 1.5rem;
+    font-weight: 600;
+    line-height: 2.4rem;
+}
+
+dl.inclusos {
+    flex: 1 0 74%;
+}
+
+dl.inclusos ul {
+    padding: 0;
+    margin: 0;
+    list-style-type: none;
+}
+
+dl.inclusos dd ul li {
+    margin: 3px 0;
+    position: relative;
+}
+
+dl.inclusos dd ul li::before {
+    content: '👉';
+    width: 20px;
+    height: 20px;
+    position: absolute;
+    left: -28px;
+    top: -3px;
 }
