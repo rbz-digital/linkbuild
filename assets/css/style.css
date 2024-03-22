@@ -29,6 +29,10 @@ a {
     color: inherit;
 }
 
+header, nav {
+    z-index: 10;
+}
+
 .flexy {
     display: flex;
     flex-wrap: wrap;
@@ -190,12 +194,6 @@ footer p {
 
 .is-style-checkmark-list li {
     margin-bottom: .1rem;
-}
-
-.secure {
-    display: flex;
-    align-items: center;
-    gap: 1rem;
 }
 
 .img-center {
@@ -449,4 +447,33 @@ dl.inclusos dd ul li::before {
     position: absolute;
     left: -28px;
     top: -3px;
+}
+
+.digicert {
+    display: flex;
+    width: 100%;
+    max-width: 184px;
+    margin: .8rem 0 1.2rem;
+    gap: .5rem;
+    padding: .5rem;
+    background-color: #FFFFFF;
+    border-radius: 6px;
+}
+
+.digicert img {
+    flex: 1;
+    max-width: 80px;
+}
+
+.rodape-menus {
+    display: flex;
+    gap: 4rem;
+}
+
+.redes li a {
+    text-decoration: none;
+}
+
+.redes li a:hover {
+    text-decoration: underline;
 }
