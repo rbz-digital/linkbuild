@@ -45,15 +45,14 @@ a {
 
 .halflex {
     flex: 1 0 50%;
-    max-width: calc( var(--max-width) / 2 );
 }
 
 .halflex-left {
-    margin: 0 0 0 auto;
+    padding: 0 0 0 calc( (100% - var(--max-width)) / 2 );
 }
 
 .halflex-right {
-    margin: 0 auto 0 0;
+    padding: 0 calc( (100% - var(--max-width)) / 2 ) 0 0;
 }
 
 .linear ul {
@@ -67,32 +66,24 @@ a {
 
 .linear ul li a {
     display: block;
-    padding: .7rem 1.2rem;
+    padding: .7rem;
     text-decoration: none;
-    background-color: rgba(0,0,0,.1);
-    border-radius: 6px;
     color: inherit;
     font-size: .9rem;
     font-weight: 600;
 }
 
 .linear ul li a:hover {
-    background-color: rgba(0,0,0,.8);
-    color: #FFFFFF;
+    color: #00ab08;
 }
 
 .linear ul li a.buy {
     background-color: #22b23b;
     color: #FFFFFF;
-    padding-right: 40px;
+    padding: .7rem 1.2rem;
     position: relative;
-}
-
-.linear ul li a.buy::after {
-    content: '👇';
-    position: absolute;
-    top: .5rem;
-    right: .8rem;
+    border-radius: 6px;
+    margin-left: .5rem;
 }
 
 .linear ul li a.buy:hover {
@@ -105,10 +96,16 @@ a {
     align-items: center;
 }
 
+.sticky {
+    position: sticky;
+    top: 0;
+    background: #FFFFFF;
+}
+
 .logo {
     position: relative;
-    width: 200px;
-    padding-left: 32px;
+    width: 204px;
+    padding-left: 36px;
 }
 
 .logo img {
@@ -137,17 +134,21 @@ a {
 .hero h1 {
     font-size: 2.4rem;
     line-height: 3rem;
+    text-align: center;
+    background-image: linear-gradient(135deg, #8244CB, #26044D);
+    background-clip: text;
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    color: #26044D;
 }
 
 .hero .subtitle {
-    font-size: 1.3rem;
-    line-height: 2rem;
+    font-size: 1rem;
+    line-height: 1.5rem;
     font-weight: 400;
     color: gray;
-    padding: 0 5% 0 15%;
-    background-image: url(../img/taxonomia.png);
-    background-repeat: no-repeat;
-    background-position: 4%;
+    text-align: center;
+    padding: 0 5%;
 }
 
 .video {
@@ -218,9 +219,32 @@ aside {
     padding: 0 0 0 85px;
     margin-bottom: 1.5rem;
     display: flex;
-    align-items: center;
     font-size: 1rem;
     line-height: 1.4rem;
+    min-height: 80px;
+}
+
+.checks li .filho {
+    padding: 0;
+}
+
+.checks li .filho li {
+    padding: 0;
+    background: none;
+    list-style-type: none;
+    margin-bottom: .5rem;
+    min-height: inherit;
+    display: inline-block;
+}
+
+.checks li .filho li::before,
+.list-template li::before {
+    content: '';
+    width: .8rem;
+    height: .8rem;
+    background-color: lightgray;
+    display: inline-block;
+    margin-right: .8rem;
 }
 
 .funcionamento {
@@ -252,27 +276,6 @@ aside {
 
 .funcionamento li:nth-child(4) {
     background-image: url(../img/number-4.png);
-}
-
-.funcionamento li .filho {
-    padding: 0;
-}
-
-.funcionamento li .filho li {
-    padding: 0;
-    background: none;
-    list-style-type: none;
-    margin-bottom: .5rem;
-}
-
-.funcionamento li .filho li::before,
-.list-template li::before {
-    content: '';
-    width: .8rem;
-    height: .8rem;
-    background-color: lightgray;
-    display: inline-block;
-    margin-right: .8rem;
 }
 
 .menor {
