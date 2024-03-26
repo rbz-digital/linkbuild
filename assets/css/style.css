@@ -151,18 +151,20 @@ header, nav {
 
 .hero {
     justify-content: center;
-    padding: 3rem 0 2rem;
+    padding: 3rem 0;
 }
 
 .hero h1 {
-    font-size: 2.4rem;
-    line-height: 3rem;
+    font-size: 2.3rem;
+    line-height: 2.9rem;
     text-align: center;
     background-image: linear-gradient(135deg, #8244CB, #26044D);
     background-clip: text;
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
     color: #26044D;
+    margin: 0;
+    padding: 0 1rem;
 }
 
 .hero .subtitle {
@@ -175,13 +177,14 @@ header, nav {
 }
 
 .video {
-    width: 960px;
-    height: 540px;
+    width: 640px;
+    height: 360px;
+    margin: 0 auto;
     background-color: #ededed;
 }
 
 .sections {
-    padding: 4rem 0;
+    padding: 5rem 0;
 }
 
 .texts {
@@ -417,18 +420,13 @@ p.saiba-mais a {
     font-size: 1rem;
     line-height: 1.4rem;
     gap: 3rem;
+    background-image: url(../img/zip.png);
 }
 
-.magic > ul > li:nth-child(1) {
-    background-image: url(../img/palavra-chave.png);
-}
-
-.magic > ul > li:nth-child(2) {
-    background-image: url(../img/nicho.png);
-}
-
-.magic > ul > li:nth-child(3) {
-    background-image: url(../img/backlinks.png);
+.magic > ul > li:nth-child(4) {
+    background-image: url(../img/relatorio-seo.png);
+    background-size: 80px;
+    padding: 0 0 0 116px;
 }
 
 .magic > ul > li .custo {
@@ -439,13 +437,19 @@ p.saiba-mais a {
 }
 
 .cc-price {
-    font-size: 1.5rem;
+    font-size: 1.4rem;
     font-weight: 600;
-    line-height: 2.4rem;
+    line-height: 2.3rem;
 }
 
 dl.inclusos {
     flex: 1 0 74%;
+}
+
+dl.inclusos .plugin {
+    margin-left: -40px;
+    color: gray;
+    margin-bottom: .5rem;
 }
 
 dl.inclusos ul {
@@ -460,12 +464,13 @@ dl.inclusos dd ul li {
 }
 
 dl.inclusos dd ul li::before {
-    content: '👉';
-    width: 20px;
-    height: 20px;
+    content: '';
+    width: 10px;
+    height: 10px;
     position: absolute;
-    left: -28px;
-    top: -3px;
+    left: -24px;
+    top: 4px;
+    background-color: gray;
 }
 
 .digicert {
@@ -495,4 +500,167 @@ dl.inclusos dd ul li::before {
 
 .redes li a:hover {
     text-decoration: underline;
+}
+
+#metodo .listing {
+    display: flex;
+    gap: 3rem;
+}
+
+#metodo h2,
+#uso h2 {
+    margin-top: 0;
+}
+
+dl.definition {
+    margin-bottom: 2rem;
+}
+
+dl.definition dt {
+    font-weight: bold;
+    margin-inline-start: 3rem;
+    font-size: 1.2rem;
+}
+
+dl.definition dd {
+    line-height: 1.5rem;
+    margin: 1em 0 1em 3rem;
+}
+
+.custo a {
+    text-decoration: none;
+    font-size: 90%;
+}
+
+.centralized div {
+    text-align: center;
+}
+
+.reviews {
+    display: flex;
+    margin: -24px auto 48px;
+    max-width: 640px;
+}
+
+.reviews .confiam {
+    flex: 1;
+    font-size: 24px;
+    font-weight: bold;
+    color: #773cbc;
+}
+
+.reviews .faces {
+    flex: 1;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+}
+
+.reviews .faces img {
+    width: 36px;
+    height: 36px;
+    border-radius: 100%;
+    border: 2px solid #FFFFFF;
+    margin-left: -6px;
+}
+
+.reviews .stars {
+    display: flex;
+    gap: 5px;
+    max-width: fit-content;
+    flex: 1;
+    align-items: center;
+}
+
+.reviews .stars .estrela {
+    width: 24px;
+    height: 24px;
+    background-image: url(../img/estrela-review.png);
+}
+
+.sliders {
+    width: 100%;
+    padding: 0 calc((100% - 434px) / 2);
+    overflow: hidden;
+}
+
+.influencers {
+    width: 434px;
+    height: 640px;
+}
+
+.assinar {
+    width: 360px;
+    margin: 0 auto 3rem;
+    line-height: 1.6rem;
+    border: 1px solid;
+    border-radius: 12px;
+    padding: 20px;
+}
+
+.assinar h3 {
+    margin: 0;
+}
+
+.assinar .button {
+    margin: 0;
+    width: 100%;
+}
+
+.valor {
+    display: flex;
+    height: 58px;
+    align-items: center;
+    justify-content: center;
+    margin: 2rem 0;
+}
+
+.valor .currency {
+    align-self: flex-start;
+    line-height: 1rem;
+}
+
+.valor .number {
+    font-size: 5rem;
+    font-weight: bold;
+}
+
+.valor-inerente {
+    text-align: center;
+}
+
+.valor-inerente .valor {
+    gap: 12px;
+    margin: 1rem 0 1.2rem;
+}
+
+.como-usar {
+    width: 960px;
+}
+
+.como-usar .funcionamento .swiper-slide {
+    max-width: 800px;
+    margin: 0 80px;
+}
+
+.como-usar .funcionamento .swiper-slide dl {
+    margin: 1.3rem 0 0;
+}
+
+.como-usar .funcionamento .swiper-slide dl dt {
+    margin-bottom: 1rem;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.como-usar .funcionamento .swiper-slide dl dd {
+    margin: 0;
+}
+
+.como-usar .funcionamento .swiper-slide dl dd .video {
+    margin: 0;
+}
+
+.como-usar .funcionamento .swiper-slide img {
+    max-width: 715px;
 }
