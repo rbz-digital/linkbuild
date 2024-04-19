@@ -224,7 +224,6 @@ footer p {
 
 aside {
     background-color: #f9f7e8;
-    background-image: url(../img/bg-carl.jpeg);
 }
 
 .checks {
@@ -423,7 +422,7 @@ p.saiba-mais a {
     background-image: url(../img/zip.png);
 }
 
-.magic > ul > li:nth-child(4) {
+.magic > ul > li:nth-child(5) {
     background-image: url(../img/relatorio-seo.png);
     background-size: 80px;
     padding: 0 0 0 116px;
@@ -627,6 +626,7 @@ dl.definition dd {
 
 .valor-inerente {
     text-align: center;
+    margin-bottom: 1.5rem;
 }
 
 .valor-inerente .valor {
@@ -663,4 +663,22 @@ dl.definition dd {
 
 .como-usar .funcionamento .swiper-slide img {
     max-width: 715px;
+}
+
+.assinar ul {
+	padding: 0;
+	margin: 1rem 0 1.5rem;
+	list-style-type: none;
+}
+
+.assinar ul li {
+	background-image: url(../img/check.png);
+	background-repeat: no-repeat;
+	padding: 0 0 0 2rem;
+	margin-bottom: .5rem;
+	display: flex;
+	font-size: 1rem;
+	line-height: 1.5rem;
+	min-height: 20px;
+	background-size: 20px;
 }
