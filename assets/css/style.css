@@ -2,21 +2,24 @@
     font-family:montserrat;
     font-style:normal;
     font-weight:400;
-    src:local('Montserrat'),url(../fonts/Montserrat-Regular.woff) format('woff')
+    src:local('Montserrat'),url(../fonts/Montserrat-Regular.woff) format('woff');
+    font-display: swap;
 }
 
 @font-face{
     font-family:montserrat;
     font-style:normal;
     font-weight:600;
-    src:local('Montserrat'),url(../fonts/Montserrat-SemiBold.woff) format('woff')
+    src:local('Montserrat'),url(../fonts/Montserrat-SemiBold.woff) format('woff');
+    font-display: swap;
 }
 
 @font-face{
     font-family:montserrat;
     font-style:normal;
     font-weight:800;
-    src:local('Montserrat'),url(../fonts/Montserrat-ExtraBold.woff) format('woff')
+    src:local('Montserrat'),url(../fonts/Montserrat-ExtraBold.woff) format('woff');
+    font-display: swap;
 }
 
 :root {
@@ -97,20 +100,21 @@ header, nav {
 }
 
 .linear ul li a:hover {
-    color: #00ab08;
+    color: #2f1152;
 }
 
 .linear ul li a.buy {
-    background-color: #22b23b;
+    background-color: #00a362;
     color: #FFFFFF;
     padding: .7rem 1.2rem;
     position: relative;
     border-radius: 6px;
     margin-left: .5rem;
+    transition: all ease .3s;
 }
 
 .linear ul li a.buy:hover {
-    background-color: #00ab08;
+    background-color: #111111;
 }
 
 .vertical-middle {
@@ -129,6 +133,7 @@ header, nav {
     position: relative;
     width: 204px;
     padding-left: 36px;
+    text-decoration: none;
 }
 
 .logo img {
@@ -277,7 +282,7 @@ aside {
 .funcionamento li {
     background-repeat: no-repeat;
     padding: 0 0 0 85px;
-    margin-bottom: 2rem;
+    margin-bottom: 4rem;
     align-items: flex-start;
     font-size: 1rem;
     line-height: 1.4rem;
@@ -309,24 +314,25 @@ aside {
     display: inline-block;
     padding: .7rem 2.8rem .7rem 1.2rem;
     text-decoration: none;
-    background-color: #22b23b;
+    background-color: #00a362;
     border-radius: 6px;
     color: #FFFFFF;
     font-size: .9rem;
     font-weight: 600;
     position: relative;
     margin-bottom: 1rem;
+    transition: all ease .3s;
 }
 
 .button::after {
-    content: '🔒';
+    content: '🡭';
     position: absolute;
     top: .6rem;
     right: .8rem;
 }
 
 .button:hover {
-    background-color: #00ab08;
+    background-color: #111111;
 }
 
 .price {
@@ -358,7 +364,7 @@ p.assinatura {
 .pagtos {
     margin-top: 1rem;
     line-height: 1.5rem;
-    opacity: .5;
+    opacity: .7;
 }
 
 .pagtos div {
@@ -394,7 +400,7 @@ p.saiba-mais a {
     display: block;
     text-decoration: none;
     font-weight: 600;
-    color: #00af6b;
+    color: #008a55;
     margin-top: 3px;
 }
 
@@ -604,10 +610,12 @@ dl.definition dd {
     border: 1px solid;
     border-radius: 12px;
     padding: 20px;
+    background: #f8f8f8;
 }
 
 .assinar h3 {
     margin: 0;
+    line-height: 1.4rem;
 }
 
 .assinar .button {
@@ -621,6 +629,7 @@ dl.definition dd {
     align-items: center;
     justify-content: center;
     margin: 2rem 0;
+    gap: 6px;
 }
 
 .valor .currency {
@@ -643,13 +652,22 @@ dl.definition dd {
     margin: 1rem 0 1.2rem;
 }
 
+.valor-inerente .valor::after {
+	content: '';
+	width: 278px;
+	height: 4px;
+	background-color: rgba(255,0,0,.75);
+	position: absolute;
+	transform: rotate(-10deg);
+}
+
 .como-usar {
     width: 960px;
 }
 
 .como-usar .funcionamento .swiper-slide {
-    max-width: 800px;
-    margin: 0 80px;
+    max-width: 725px;
+    padding-left: 128px;
 }
 
 .como-usar .funcionamento .swiper-slide dl {
@@ -733,6 +751,6 @@ dl.definition dd {
 .equipe .profissional dl dd {
     padding: 0;
     margin: 0;
-    opacity: .6;
+    opacity: .7;
     font-size: .7rem;
 }
