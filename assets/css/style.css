@@ -357,10 +357,8 @@ p.assinatura {
 
 .pagtos {
     margin-top: 1rem;
-    display: flex;
-    gap: 1rem;
-    align-items: center;
-    opacity: .4;
+    line-height: 1.5rem;
+    opacity: .5;
 }
 
 .pagtos div {
@@ -699,4 +697,42 @@ dl.definition dd {
     padding-top: 6rem;
     position: relative;
     z-index: 0;
+}
+
+.equipe {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.equipe .profissional {
+    display: flex;
+    gap: 1.3rem;
+    margin-bottom: .5rem;
+    flex: 1 0 40%;
+}
+
+.equipe .profissional figure {
+    margin: 0;
+}
+
+.equipe .profissional figure img {
+    border-radius: 100%;
+}
+
+.equipe .profissional dl {
+    margin: 0;
+}
+
+.equipe .profissional dl dt {
+    font-weight: 600;
+    font-size: .9rem;
+    margin-bottom: .2rem;
+}
+
+.equipe .profissional dl dd {
+    padding: 0;
+    margin: 0;
+    opacity: .6;
+    font-size: .7rem;
 }
