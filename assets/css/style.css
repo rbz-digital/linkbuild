@@ -422,12 +422,21 @@ p.saiba-mais a {
     line-height: 1.4rem;
     gap: 3rem;
     background-image: url(../img/zip.png);
+    background-size: 64px;
+    padding: 0 0 0 116px;
 }
 
-.magic > ul > li:nth-child(5) {
+.magic > ul > li.bonus {
     background-image: url(../img/relatorio-seo.png);
-    background-size: 80px;
-    padding: 0 0 0 116px;
+}
+
+.magic > ul > li.whisper {
+    background-image: url(../img/link-whisper-64.png);
+    background-size: 64px;
+}
+
+.magic > ul > li.wincher {
+    background-image: url(../img/wincher-64.png);
 }
 
 .magic > ul > li .custo {
